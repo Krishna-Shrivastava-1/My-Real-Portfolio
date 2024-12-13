@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+body,html {
+  background: linear-gradient(135deg, #171729, #111111); /* Deep navy to dark gray */
+  color: #E0E0E0;
+  overflow-x: hidden; /* Soft white for text */
+}
+.bfg{
+  /* background: linear-gradient(to right , #fc72ff,#487bff,#8f68ff,#fc72ff); */
+  background: linear-gradient(to right, #FF6A88, #FC72FF, #487BFF, #8F68FF, #FFC371);
+/* box-shadow:0px 2px 10px #487BFF; */
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animated 2.5s linear infinite;
+}
+.bfg h1{
+  text-shadow: 2px 4px 15px #487BFF;
+}
+@keyframes animated{
+  to{
+    background-position: 200%;
+  }
+}
+
+@keyframes waveFloat {
+  0%, 100% {
+    transform: translateY(0); /* Initial and final position */
+  }
+  50% {
+    transform: translateY(-15px); /* Moves up by 10px */
+  }
+}
+
+.img-float {
+  animation: waveFloat 3s ease-in-out infinite; /* 'ease-in-out' for smooth transition */
+}
+
+/* Add delays for wave effect */
+.img-float:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.img-float:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.img-float:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.img-float:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.img-float:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.img-float:nth-child(6) {
+  animation-delay: 1s;
+}
+
+
+.plce{
+  background: linear-gradient(to bottom, #1a1a1a, #16a34a, #0ea5e9, #1a1a1a);
+  box-shadow: 0px 5px 20px rgba(22, 163, 74, 0.5), 0px 10px 20px rgba(14, 165, 233, 0.3);
+}
+.plcx{
+  text-shadow: 0px 5px 20px rgba(6, 241, 92, 0.904), 0px 10px 20px rgba(14, 164, 233, 0.904);
+}
+.plcr{
+  text-shadow: 0px 5px 20px rgba(241, 6, 6, 0.904), 0px 10px 20px rgba(2, 42, 61, 0.904);
+}
+.plck{
+  text-shadow: 0px 5px 20px rgba(241, 131, 6, 0.904), 0px 10px 20px rgba(3, 34, 49, 0.904);
+}
+.skibo{
+  box-shadow: 0px 1px 4px white, 0px -1px 4px white;
+}
+/* Define keyframes for animation */
+@keyframes animateShadow {
+  0% {
+    box-shadow: 0px 5px 20px rgba(22, 163, 74, 0.5), 0px 10px 20px rgba(14, 165, 233, 0.3);
+  }
+  25% {
+    box-shadow: 0px 8px 30px rgba(22, 163, 74, 0.7), 0px 12px 25px rgba(14, 165, 233, 0.5);
+  }
+  50% {
+    box-shadow: 0px 10px 40px rgba(22, 163, 74, 0.3), 0px 15px 30px rgba(14, 165, 233, 0.8);
+  }
+  75% {
+    box-shadow: 0px 8px 30px rgba(22, 163, 74, 0.7), 0px 12px 25px rgba(14, 165, 233, 0.5);
+  }
+  100% {
+    box-shadow: 0px 5px 20px rgba(22, 163, 74, 0.5), 0px 10px 20px rgba(14, 165, 233, 0.3);
+  }
+}
+
+/* Apply animation to .plce */
+.plce {
+  background: linear-gradient(to bottom, #1a1a1a, #16a34a, #0ea5e9, #1a1a1a);
+  box-shadow: 0px 5px 20px rgba(22, 163, 74, 0.5), 0px 10px 20px rgba(14, 165, 233, 0.3);
+  animation: animateShadow 3s infinite ease-in-out; /* Animation properties */
+}
+
+/* Animation for .plcx (green and blue text shadow) */
+@keyframes animatePlcxShadow {
+  0% {
+    text-shadow: 0px 5px 20px rgba(6, 241, 92, 0.904), 0px 10px 20px rgba(14, 164, 233, 0.904);
+  }
+  50% {
+    text-shadow: 0px 8px 30px rgba(6, 241, 92, 0.7), 0px 15px 30px rgba(14, 164, 233, 0.7);
+  }
+  100% {
+    text-shadow: 0px 5px 20px rgba(6, 241, 92, 0.904), 0px 10px 20px rgba(14, 164, 233, 0.904);
+  }
+}
+@keyframes moveText {
+  0% {
+    transform: translateY(0); /* Original position */
+  }
+  25% {
+    transform: translateY(-3px); /* Moves up slightly */
+  }
+  50% {
+    transform: translateY(0); /* Back to original position */
+  }
+  75% {
+    transform: translateY(3px); /* Moves down slightly */
+  }
+  100% {
+    transform: translateY(0); /* Back to original position */
+  }
+}
+
+/* Animation for .plcr (red and dark text shadow) */
+@keyframes animatePlcrShadow {
+  0% {
+    text-shadow: 0px 5px 20px rgba(241, 6, 6, 0.904), 0px 10px 20px rgba(2, 42, 61, 0.904);
+  }
+  50% {
+    text-shadow: 0px 8px 30px rgba(241, 6, 6, 0.7), 0px 15px 30px rgba(2, 42, 61, 0.7);
+  }
+  100% {
+    text-shadow: 0px 5px 20px rgba(241, 6, 6, 0.904), 0px 10px 20px rgba(2, 42, 61, 0.904);
+  }
+}
+
+/* Animation for .plck (orange and dark text shadow) */
+@keyframes animatePlckShadow {
+  0% {
+    text-shadow: 0px 5px 20px rgba(241, 131, 6, 0.904), 0px 10px 20px rgba(3, 34, 49, 0.904);
+  }
+  50% {
+    text-shadow: 0px 8px 30px rgba(241, 131, 6, 0.7), 0px 15px 30px rgba(3, 34, 49, 0.7);
+  }
+  100% {
+    text-shadow: 0px 5px 20px rgba(241, 131, 6, 0.904), 0px 10px 20px rgba(3, 34, 49, 0.904);
+  }
+}
+
+/* Animation for .skibo (white box shadow) */
+@keyframes animateSkiboShadow {
+  0% {
+    box-shadow: 0px 1px 4px white, 0px -1px 4px white;
+  }
+  50% {
+    box-shadow: 0px 3px 8px rgba(255, 255, 255, 0.8), 0px -3px 8px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    box-shadow: 0px 1px 4px white, 0px -1px 4px white;
+  }
+}
+
+/* Applying animations */
+.plcx {
+  animation: animatePlcxShadow 3s infinite ease-in-out,moveText 3s infinite ease-in-out;
+}
+
+.plcr {
+  animation: animatePlcrShadow 3s infinite ease-in-out;
+}
+
+.plck {
+  animation: animatePlckShadow 3s infinite ease-in-out;
+}
+
+.skibo {
+  animation: animateSkiboShadow 3s infinite ease-in-out;
+}
+
